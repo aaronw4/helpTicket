@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import welcomeImg from '../../src/SVG/homePage.svg';
 
 function HomePage() {
 	return (
@@ -9,7 +8,7 @@ function HomePage() {
 			
 			<div className="content">
 				<div className="image">
-					<img src={welcomeImg} alt="Welcome to Our Page"/>
+					<img alt="Welcome to Our Page"/>
 				</div>
 				
 				<Link to='/studentRegister'>

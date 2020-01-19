@@ -1,5 +1,4 @@
 import React from "react";
-import loginImg from "../../src/SVG/signIn.svg";
 import axios from 'axios' 
 
 class studentLogin extends React.Component {
@@ -46,7 +45,7 @@ login = e => {
         
         <div className="content">
           <div className="image">
-            <img src={loginImg} alt="Student Login"/>
+            <img alt="Student Login"/>
           </div>
           
           <div className="form">

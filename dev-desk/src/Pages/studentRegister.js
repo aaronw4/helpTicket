@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import registerImg from '../../src/SVG/register.svg';
 
 export class studentRegister extends React.Component {
   state = {
@@ -35,7 +34,7 @@ export class studentRegister extends React.Component {
         
         <div className="content">
           <div className="image">
-            <img src={registerImg} alt="Please Register"/>
+            <img alt="Please Register"/>
           </div>
         </div>
         

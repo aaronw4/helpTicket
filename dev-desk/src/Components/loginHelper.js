@@ -1,5 +1,4 @@
 import React from 'react';
-import helperImg from '../../src/SVG/askMe.svg';
 import axios from 'axios';
 
 class LoginHelper extends React.Component {
@@ -45,7 +44,7 @@ class LoginHelper extends React.Component {
                 
                 <div className='content'>
                     <div className='image'>
-                        <img src={helperImg} alt='Helper' width='50%' height='50%'/>
+                        <img alt='Helper' width='50%' height='50%'/>
                     </div>
                 </div>
                 <form onSubmit={this.login}>
