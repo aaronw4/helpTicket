@@ -1,9 +1,9 @@
 import React from "react";
 import loginImg from "../../src/SVG/signIn.svg";
-import axios from 'axios' //added import
+import axios from 'axios' 
 
 class studentLogin extends React.Component {
-  //added state
+  
   state = {
     credentials: {
         username: '',
@@ -11,7 +11,7 @@ class studentLogin extends React.Component {
     },
     failLogin: false
 };
-//added handleChange
+
 handleChange = e => {
     this.setState({
         credentials: {
@@ -20,7 +20,7 @@ handleChange = e => {
         }
     })
 };
-//added login
+
 login = e => {
     e.preventDefault();
 
@@ -56,19 +56,19 @@ login = e => {
                 type="text" 
                 name="username" 
                 placeholder="username"
-                value={this.state.credentials.username} //added
-                onChange={this.handleChange} //added
+                value={this.state.credentials.username} 
+                onChange={this.handleChange} 
               />
             </div>
             
             <div className="form-group">
               <label htmlFor="password">Password</label>
               <input 
-                type="password" //changed from text to password
+                type="password" 
                 name="password" 
                 placeholder="password"
-                value={this.state.credentials.password} //added
-                onChange={this.handleChange} //added
+                value={this.state.credentials.password} 
+                onChange={this.handleChange} 
               />
             </div>
           </div>
