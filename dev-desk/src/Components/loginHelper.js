@@ -40,13 +40,8 @@ class LoginHelper extends React.Component {
     render(){
         return(
             <div>
-                <h1>Helper Log In Page</h1>
+                <h1>Helper Log In Page</h1>                
                 
-                <div className='content'>
-                    <div className='image'>
-                        <img alt='Helper' width='50%' height='50%'/>
-                    </div>
-                </div>
                 <form onSubmit={this.login}>
                     <input
                         type='text'

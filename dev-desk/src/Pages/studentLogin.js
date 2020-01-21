@@ -44,9 +44,6 @@ login = e => {
         <div className="header">Student Login</div>
         
         <div className="content">
-          <div className="image">
-            <img alt="Student Login"/>
-          </div>
           
           <div className="form">
             <div className="form-group">
