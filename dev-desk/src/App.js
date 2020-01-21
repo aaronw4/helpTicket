@@ -7,7 +7,7 @@ import Helper from './Components/helper';
 import studentLogin from './Pages/studentLogin';
 import studentRegister from './Pages/studentRegister';
 import studentDashboard from './Pages/studentDashboard';
-import CreateTicket from './Components/createHelperTicket'
+import CreateTicket from './Components/createTicket'
 import '../src/App.css'
 
 function App() {

@@ -20,10 +20,14 @@ function Student() {
         getTickets()
     });
 
+    const handleCreateTicket = e => {
+        window.location=('/helper/Ticket');
+    };
 
     return(
         <div className='studentComponent'>
             <LogOutHeader/>
+            <button onClick={handleCreateTicket} className='helperCreateTicketButton'>Create Ticket</button>
             <div>
                 <h1 className='welcome'>Welcome {username} to the Student Help Page!</h1>
             </div>

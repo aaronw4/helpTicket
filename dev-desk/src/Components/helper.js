@@ -70,10 +70,6 @@ function Helper() {
         setTimeout(() => {setUpdate(update +1)}, 100);
     }
 
-    const handleCreateTicket = e => {
-        window.location=('/helper/Ticket');
-    }
-
     const deleteTicket = e => {
         e.preventDefault();
         let user = Number(userID);
@@ -92,7 +88,6 @@ function Helper() {
     return(
         <div className='helperComponent'>
             <LogOutHeader/>
-            <button onClick={handleCreateTicket} className='helperCreateTicketButton'>Create Ticket</button>
             <div>
                 <h1 className='welcome'>Welcome {username} to the Helper page!</h1>
             </div>
