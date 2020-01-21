@@ -40,7 +40,7 @@ class LoginHelper extends React.Component {
     render(){
         return(
             <div>
-                <h1>Helper Log In Page</h1>                
+                <h1 className="loginHeader">Helper Log In Page</h1>                
                 
                 <form onSubmit={this.login}>
                     <input
@@ -49,7 +49,7 @@ class LoginHelper extends React.Component {
                         value={this.state.credentials.username}
                         onChange={this.handleChange}
                         placeholder='User Name'
-                        className='helperLoginInput'
+                        className='loginInput'
                     />
                     <input
                         type='password'
@@ -57,7 +57,7 @@ class LoginHelper extends React.Component {
                         value={this.state.credentials.password}
                         onChange={this.handleChange}
                         placeholder='Password'
-                        className='helperLoginInput'
+                        className='loginInput'
                     />
                     <button>Log In</button>
                     {this.state.failLogin === true ? <p>Log In Failed</p> : null}

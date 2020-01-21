@@ -41,40 +41,34 @@ login = e => {
   render() {
     return (
       <div className="base-container" ref={this.props.containerRef}>
-        <div className="header">Student Login</div>
+        <h1 className="loginHeader">Student Log In Page</h1>
         
         <div className="content">
           
           <div className="form">
             <div className="form-group">
-              <label htmlFor="username">Username</label>
               <input 
                 type="text" 
                 name="username" 
-                placeholder="username"
+                placeholder="User Name"
                 value={this.state.credentials.username} 
                 onChange={this.handleChange} 
-              />
-            </div>
-            
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
+                className='loginInput'
+              />            
               <input 
                 type="password" 
                 name="password" 
-                placeholder="password"
+                placeholder="Password"
                 value={this.state.credentials.password} 
-                onChange={this.handleChange} 
+                onChange={this.handleChange}
+                className='loginInput' 
               />
+              <button onClick={this.login} >
+                Log In
+              </button>
             </div>
           </div>
-        </div>
-        
-        <div className="footer">
-          <button type="button" className="btn" onClick={this.login} >
-            Login
-          </button>
-        </div>
+        </div>        
       </div>
     );
   }

@@ -7,11 +7,10 @@ body {
 .content button {
   margin: 10px;
 }
-.welcome {
-  margin-left: 10%;
+.welcome, .loginHeader {
   color: #F0F4F7;
 }
-.helperLoginInput {
+.loginInput {
   margin: 5px;
   margin-top: 10px;
 }
