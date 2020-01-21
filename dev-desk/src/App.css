@@ -15,7 +15,7 @@ body {
   margin: 5px;
   margin-top: 10px;
 }
-.helperTicket {
+.ticket {
   color: #F0F4F7;
 }
 .ticketsContainer {
@@ -25,7 +25,7 @@ body {
 .ticketSubcontainer {
   width:40%;
 }
-.helperCreateTicketButton {
+.createTicketButton {
   float: left;
   margin-left: 8%;
   margin-top: 10px;
@@ -43,6 +43,6 @@ body {
   border: 1px solid black;
   background: #F0F4F7;
 }
-.helperTicketButton {
+.ticketButton {
   margin: 5px;
 }

@@ -27,7 +27,7 @@ function Student() {
     return(
         <div className='studentComponent'>
             <LogOutHeader/>
-            <button onClick={handleCreateTicket} className='helperCreateTicketButton'>Create Ticket</button>
+            <button onClick={handleCreateTicket} className='createTicketButton'>Create Ticket</button>
             <div>
                 <h1 className='welcome'>Welcome {username} to the Student Help Page!</h1>
             </div>
