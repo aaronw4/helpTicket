@@ -1,6 +1,6 @@
 # Dev Desk Queue
 
-To run the app, in the terminal cd into folder dev-desk and enter put yarn start.
+To run the app, in the terminal cd into folder dev-desk and enter put yarn start. You can create your own user name and password by clicking on "Register" on the home page. You can also click on "Student" or "Helper" and user aaron as the username and pass as the password.
 
 ## **Proposal**
 - Purpose
