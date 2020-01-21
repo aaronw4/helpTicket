@@ -1,20 +1,48 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import {axiosWithAuth} from '../Components/axiosWithAuth';
 import LogOutHeader from '../Components/logOutHeader'
 
-class student extends React.Component {
-    userID = localStorage.getItem('id');
-    username = localStorage.getItem('name');
+function Student() {
+    const [tickets, setTickets] = useState([]);
+    const userID = localStorage.getItem('id');
+    const username = localStorage.getItem('name');
 
-    render(){
-        return(
-            <div className='studentComponent'>
-                <LogOutHeader/>
-                <div>
-                    <h1 className='helperWelcome'>Welcome {this.username} to the Student Help Page!</h1>
+    useEffect(() => {
+        const getTickets = () => {
+            axiosWithAuth()
+                .get('/ticket/')
+                .then(res => {
+                    setTickets(res.data);
+                    console.log(res);
+                })
+                .catch(err => console.log(err.message))
+        };
+        getTickets()
+    });
+
+
+    return(
+        <div className='studentComponent'>
+            <LogOutHeader/>
+            <div>
+                <h1 className='welcome'>Welcome {username} to the Student Help Page!</h1>
+            </div>
+            <div className='ticketsContainer'>
+                <div className='ticketSubcontainer'>
+                    <h3 className='ticketList'>List of Tickets</h3>
+                    {tickets.map(ticket => (
+                            <div className='ticketList' key={ticket.id}>
+                                <p>Title: {ticket.title}</p>
+                                <p>Category: {ticket.category}</p>
+                                <p>Description: {ticket.description}</p>
+                                <p>Attempted: {ticket.attempted}</p>
+                            </div>
+                        ))}
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
 }
 
-export default student
+
+export default Student

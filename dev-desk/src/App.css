@@ -7,11 +7,7 @@ body {
 .content button {
   margin: 10px;
 }
-.image img {
-  width: 40%;
-  height: auto;
-}
-.helperWelcome {
+.welcome {
   margin-left: 10%;
   color: #F0F4F7;
 }
@@ -19,17 +15,14 @@ body {
   margin: 5px;
   margin-top: 10px;
 }
-body {  
-  background: #2F2B4A;
-}
 .helperTicket {
   color: #F0F4F7;
 }
-.helperTicketsContainer {
+.ticketsContainer {
   display: flex;
   justify-content: space-evenly;
 }
-.helperTicketSubcontainer {
+.ticketSubcontainer {
   width:40%;
 }
 .helperCreateTicketButton {
@@ -38,7 +31,7 @@ body {
   margin-top: 10px;
   padding: 10px;
 }
-.ticketListHelper {
+.ticketList {
   margin: 10px;
   padding: 10px;
   border: 1px solid black;

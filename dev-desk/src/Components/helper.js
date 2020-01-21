@@ -94,13 +94,13 @@ function Helper() {
             <LogOutHeader/>
             <button onClick={handleCreateTicket} className='helperCreateTicketButton'>Create Ticket</button>
             <div>
-                <h1 className='helperWelcome'>Welcome {username} to the Helper page!</h1>
+                <h1 className='welcome'>Welcome {username} to the Helper page!</h1>
             </div>
-            <div className='helperTicketsContainer'>
-                <div className='helperTicketSubcontainer'>
-                    <h3 className='ticketListHelper'>List of Tickets</h3>
+            <div className='ticketsContainer'>
+                <div className='ticketSubcontainer'>
+                    <h3 className='ticketList'>List of Tickets</h3>
                     {tickets.map(ticket => (
-                        <div className='ticketListHelper' key={ticket.id}>
+                        <div className='ticketList' key={ticket.id}>
                             <p>Title: {ticket.title}</p>
                             <p>Category: {ticket.category}</p>
                             <p>Description: {ticket.description}</p>
@@ -113,7 +113,7 @@ function Helper() {
                     ))}
                     
                 </div>
-                <div className='helperTicketSubcontainer'>
+                <div className='ticketSubcontainer'>
                     <h3 className='assignedListHelper'>Tickets Assigned to You</h3>
                     {userTickets.map(ticket => (
                         <div className='assignedListHelper' key={ticket.id}>
