@@ -25,6 +25,8 @@ function CreateTicket() {
     const handleSubmit = e => {
         e.preventDefault();
         let number = Number(userID);
+        
+        console.log(number);
         setMessage('Your ticket is being submitted.')
 
         axiosWithAuth()
