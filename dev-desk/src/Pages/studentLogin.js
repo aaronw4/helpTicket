@@ -28,7 +28,7 @@ login = e => {
         .then(res => {
             console.log(res);
             localStorage.setItem('token', res.data.token);
-            localStorage.setItem('id', res.data.data[0].id);
+            localStorage.setItem('id', res.data.data[0].userId);
             localStorage.setItem('name', res.data.data[0].username);
             this.props.history.push('/studentDashboard');
         })
