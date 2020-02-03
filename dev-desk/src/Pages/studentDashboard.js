@@ -49,6 +49,7 @@ function Student() {
                                 <p>Category: {ticket.category}</p>
                                 <p>Description: {ticket.description}</p>
                                 <p>Attempted: {ticket.attempted}</p>
+                                <p>Ticket submitted by: {ticket.username}</p>
                             </div>
                         ))}
                 </div>
@@ -60,6 +61,7 @@ function Student() {
                             <p>Category: {ticket.category}</p>
                             <p>Description: {ticket.description}</p>
                             <p>Attempted: {ticket.attempted}</p>
+                            <p>Ticket submitted by: {ticket.username}</p>
                         </div>
                     ))}
                 </div>
