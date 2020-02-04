@@ -1,5 +1,8 @@
 import React from 'react';
 import axios from 'axios';
+import Loader from 'react-loader-spinner';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+
 
 class LoginHelper extends React.Component {
     state = {
@@ -7,7 +10,8 @@ class LoginHelper extends React.Component {
             username: '',
             password: ''
         },
-        failLogin: false
+        failLogin: false,
+        hitSubmit: false
     };
 
     handleChange = e => {
@@ -21,6 +25,7 @@ class LoginHelper extends React.Component {
 
     login = e => {
         e.preventDefault();
+        this.setState({hitSubmit: true});
 
         axios
             .post('https://dev-desk-que-3-bw.herokuapp.com/api/user/login', this.state.credentials)
@@ -62,6 +67,14 @@ class LoginHelper extends React.Component {
                     <button>Log In</button>
                     {this.state.failLogin === true ? <p>Log In Failed</p> : null}
                 </form>
+                {this.state.hitSubmit === true ? 
+                <Loader
+                    type="Oval"
+                    color="white"
+                    height={50}
+                    width={50}
+                    timeout={0}
+                />  : null  } 
             </div>
         );
     };
