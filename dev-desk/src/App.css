@@ -7,7 +7,7 @@ body {
 .content button {
   margin: 10px;
 }
-.welcome, .loginHeader {
+.welcome, .loginHeader, .header {
   color: #F0F4F7;
 }
 .loginInput {

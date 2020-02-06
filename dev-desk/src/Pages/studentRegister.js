@@ -1,11 +1,14 @@
 import React from 'react';
 import axios from 'axios';
+import Loader from 'react-loader-spinner';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 export class studentRegister extends React.Component {
   state = {
     username: '',
     password: '',
-    message:''
+    message:'',
+    hitSubmit: false
   } 
 
   handleChange = e => {
@@ -13,7 +16,8 @@ export class studentRegister extends React.Component {
   }
 
   register = e => {
-    e.preventDefault();
+    e.preventDefault();                
+    this.setState({hitSubmit: true});
     
     axios
       .post('https://dev-desk-que-3-bw.herokuapp.com/api/user/register', {
@@ -30,44 +34,41 @@ export class studentRegister extends React.Component {
   render() {
     return (
       <div className="base-container" ref={this.props.containerRef}>
-        <div className="header">Student Register</div>
-        
-        <div className="content">
-          <div className="image">
-            <img alt="Please Register"/>
-          </div>
-        </div>
+        <h1 className="header">Student Register</h1>
+        <p className='header'>Select a user name and a password.</p>
         
         <div className="form">
           <div className="form-group">
-            <label htmlFor="username">Username </label>
             <input 
               type="text" 
               name="username" 
-              placeholder="username"
+              placeholder="User Name"
               value={this.state.username}
               onChange={this.handleChange}
-            />
-          </div>
-                    
-          <div className="form-group">
-            <label htmlFor="password">Password </label>
+              className='loginInput'
+            />         
             <input 
               type="password" 
               name="password" 
-              placeholder="password"
+              placeholder="Password"
               value={this.state.password}
               onChange={this.handleChange}
+              className='loginInput'
             />
+            <button type="button" onClick={this.register}>
+              Register
+            </button>
           </div>
         </div>
-        
-        <div className="footer">
-          <button type="button" className="btn" onClick={this.register}>
-            Register
-          </button>
-        </div>
-        <p>{this.state.message}</p>
+        {this.state.hitSubmit === true ? 
+        <Loader
+          type="Oval"
+          color="white"
+          height={50}
+          width={50}
+          timeout={0}
+        />  : null  } 
+        <p className='header'>{this.state.message}</p>
       </div>
     );
   }

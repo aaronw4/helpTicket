@@ -5,7 +5,6 @@ import LogOutHeader from '../Components/logOutHeader'
 function Student() {
     const [tickets, setTickets] = useState([]);
     const [userTickets, setUserTickets] = useState([]);
-    const [update, setUpdate] = useState(1);
     const userID = localStorage.getItem('id');
     const username = localStorage.getItem('name');
 
@@ -20,8 +19,7 @@ function Student() {
                 .catch(err => console.log(err.message))
         };
         getTickets()
-
-    },[update]);  
+    },[]);  
     
     useEffect(() => {   
         let newList =  tickets.filter(ticket => ticket.userId === Number(userID));
