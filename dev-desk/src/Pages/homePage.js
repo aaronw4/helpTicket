@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 function HomePage() {
 	return (
 		<div>
-			<h1 className='welcome'>Development Desk Home Page</h1>
+			<h1 className='welcome pageTitle'>Development Desk Home Page</h1>
 			
 			<div className="content">				
 				<Link to='/studentRegister'>

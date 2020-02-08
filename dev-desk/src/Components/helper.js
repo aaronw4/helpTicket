@@ -89,7 +89,7 @@ function Helper() {
         <div className='helperComponent'>
             <LogOutHeader/>
             <div>
-                <h1 className='welcome'>Welcome {username} to the Helper page!</h1>
+                <h1 className='welcome pageTitle'>Welcome {username} to the Helper page!</h1>
             </div>
             <div className='ticketsContainer'>
                 <div className='ticketSubcontainer'>

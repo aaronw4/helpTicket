@@ -36,7 +36,7 @@ function Student() {
             <LogOutHeader/>
             <button onClick={handleCreateTicket} className='createTicketButton'>Create Ticket</button>
             <div>
-                <h1 className='welcome'>Welcome {username} to the Student Help Page!</h1>
+                <h1 className='welcome pageTitle'>Welcome {username} to the Student Help Page!</h1>
             </div>
             <div className='ticketsContainer'>
                 <div className='ticketSubcontainer'>
