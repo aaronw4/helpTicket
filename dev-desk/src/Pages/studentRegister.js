@@ -31,33 +31,43 @@ export class studentRegister extends React.Component {
       .catch(err => console.log(err))
   }
 
+  backToHomePage = e => {
+    e.preventDefault();
+    window.location='/'
+  }
+
   render() {
     return (
       <div className="base-container" ref={this.props.containerRef}>
-        <h1 className="header">Student Register</h1>
-        <p className='header'>Select a user name and a password.</p>
-        
-        <div className="form">
-          <div className="form-group">
-            <input 
-              type="text" 
-              name="username" 
-              placeholder="User Name"
-              value={this.state.username}
-              onChange={this.handleChange}
-              className='loginInput'
-            />         
-            <input 
-              type="password" 
-              name="password" 
-              placeholder="Password"
-              value={this.state.password}
-              onChange={this.handleChange}
-              className='loginInput'
-            />
-            <button type="button" onClick={this.register}>
-              Register
-            </button>
+        <div>
+            <button onClick={this.backToHomePage} className='homeButton'>Home Page</button>
+        </div>
+        <div>
+          <h1 className="header pageTitle">Student Register Page</h1>
+          <p className='header'>Select a user name and a password.</p>
+          
+          <div className="form">
+            <div className="form-group">
+              <input 
+                type="text" 
+                name="username" 
+                placeholder="User Name"
+                value={this.state.username}
+                onChange={this.handleChange}
+                className='loginInput'
+              />         
+              <input 
+                type="password" 
+                name="password" 
+                placeholder="Password"
+                value={this.state.password}
+                onChange={this.handleChange}
+                className='loginInput'
+              />
+              <button type="button" onClick={this.register}>
+                Register
+              </button>
+            </div>
           </div>
         </div>
         {this.state.hitSubmit === true ? 

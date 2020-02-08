@@ -41,11 +41,19 @@ class LoginHelper extends React.Component {
                 this.setState({failLogin: true});
             })
     };
+
+    backToHomePage = e => {
+        e.preventDefault();
+        window.location='/'
+      }
     
     render(){
         return(
             <div>
-                <h1 className="loginHeader">Helper Log In Page</h1>                
+                <div>
+                    <button onClick={this.backToHomePage} className='homeButton'>Home Page</button>
+                </div>
+                <h1 className="loginHeader pageTitle">Helper Log In Page</h1>                
                 
                 <form onSubmit={this.login}>
                     <input

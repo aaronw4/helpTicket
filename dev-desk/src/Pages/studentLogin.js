@@ -12,40 +12,48 @@ class studentLogin extends React.Component {
     },
     failLogin: false,
     hitSubmit: false
-};
+  };
 
-handleChange = e => {
-    this.setState({
-        credentials: {
-            ...this.state.credentials,
-            [e.target.name]: e.target.value
-        }
-    })
-};
+  handleChange = e => {
+      this.setState({
+          credentials: {
+              ...this.state.credentials,
+              [e.target.name]: e.target.value
+          }
+      })
+  };
 
-login = e => {
-    e.preventDefault();                
-    this.setState({hitSubmit: true});
+  login = e => {
+      e.preventDefault();                
+      this.setState({hitSubmit: true});
 
-    axios
-        .post('https://dev-desk-que-3-bw.herokuapp.com/api/user/login', this.state.credentials)
-        .then(res => {
-            console.log(res);
-            localStorage.setItem('token', res.data.token);
-            localStorage.setItem('id', res.data.data[0].userId);
-            localStorage.setItem('name', res.data.data[0].username);
-            this.props.history.push('/studentDashboard');
-        })
-        .catch(err => {
-            console.log(err.message);
-            this.setState({failLogin: true});
-        })
-};
+      axios
+          .post('https://dev-desk-que-3-bw.herokuapp.com/api/user/login', this.state.credentials)
+          .then(res => {
+              console.log(res);
+              localStorage.setItem('token', res.data.token);
+              localStorage.setItem('id', res.data.data[0].userId);
+              localStorage.setItem('name', res.data.data[0].username);
+              this.props.history.push('/studentDashboard');
+          })
+          .catch(err => {
+              console.log(err.message);
+              this.setState({failLogin: true});
+          })
+  };
+
+  backToHomePage = e => {
+    e.preventDefault();
+    window.location='/'
+  }
   
   render() {
     return (
       <div className="base-container" ref={this.props.containerRef}>
-        <h1 className="loginHeader">Student Log In Page</h1>
+      <div>
+          <button onClick={this.backToHomePage} className='homeButton'>Home Page</button>
+      </div>
+        <h1 className="loginHeader pageTitle">Student Log In Page</h1>
         
         <div className="content">
           
