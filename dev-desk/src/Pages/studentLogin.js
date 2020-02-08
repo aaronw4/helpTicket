@@ -88,6 +88,7 @@ class studentLogin extends React.Component {
           height={50}
           width={50}
           timeout={0}
+          className='loader'
         />  : null  }  
       </div>
     );
