@@ -28,7 +28,7 @@ class studentLogin extends React.Component {
       this.setState({hitSubmit: true});
 
       axios
-          .post('https://dev-desk-que-3-bw.herokuapp.com/api/user/login', this.state.credentials)
+          .post('https://arw-help-ticket-backend.herokuapp.com/api/user/login', this.state.credentials)
           .then(res => {
               console.log(res);
               localStorage.setItem('token', res.data.token);

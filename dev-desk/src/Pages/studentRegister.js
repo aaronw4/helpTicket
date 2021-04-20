@@ -20,7 +20,7 @@ export class studentRegister extends React.Component {
     this.setState({hitSubmit: true});
     
     axios
-      .post('https://dev-desk-que-3-bw.herokuapp.com/api/user/register', {
+      .post('https://arw-help-ticket-backend.herokuapp.com/api/user/register', {
         username: this.state.username,
         password: this.state.password
       })
