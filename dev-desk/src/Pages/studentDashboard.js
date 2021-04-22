@@ -7,6 +7,7 @@ function Student() {
     const [userTickets, setUserTickets] = useState([]);
     const userID = localStorage.getItem('id');
     const username = localStorage.getItem('name');
+    const [update, setUpdate] = useState(1)
 
     useEffect(() => {
         const getTickets = () => {
@@ -19,7 +20,7 @@ function Student() {
                 .catch(err => console.log(err.message))
         };
         getTickets()
-    },[]);  
+    },[update]);  
     
     useEffect(() => {   
         let newList =  tickets.filter(ticket => ticket.userId === Number(userID));
@@ -30,6 +31,21 @@ function Student() {
     const handleCreateTicket = e => {
         window.location=('/helper/Ticket');
     };
+
+    const deleteTicket = e => {
+        e.preventDefault();
+        let user = Number(userID);
+        let id = Number(e.target.value)
+
+        axiosWithAuth()
+            .delete('/ticket/', {data: {
+                userId: user,
+                ticketId: id
+            }})
+            .catch(err => console.log(err.message))
+        
+        setTimeout(() => {setUpdate(update +1)}, 100);
+    }
     
     return(
         <div className='studentComponent'>
@@ -60,6 +76,7 @@ function Student() {
                             <p>Description: {ticket.description}</p>
                             <p>Attempted: {ticket.attempted}</p>
                             <p>Ticket submitted by: {ticket.username}</p>
+                            <button value={ticket.id} onClick={deleteTicket}>Delete</button>
                         </div>
                     ))}
                 </div>
