@@ -100,9 +100,9 @@ function Helper() {
                             <p>Category: {ticket.category}</p>
                             <p>Description: {ticket.description}</p>
                             <p>Attempted: {ticket.attempted}</p>
-                            {ticket.resolved === true ? <p>Resolved</p> : null }
-                            {ticket.openStatus === false && ticket.resolved === false ? <p>Ticket Assigned</p> : null}
-                            {ticket.resolved === false && ticket.openStatus === true ? <button onClick={assignTicket} value={ticket.id}>Assign Ticket</button> : null}
+                            {ticket.resolved ? <p>Resolved</p> : null }
+                            {ticket.openStatus == false && ticket.resolved == false ? <p>Ticket Assigned</p> : null}
+                            {ticket.resolved == false && ticket.openStatus == true ? <button onClick={assignTicket} value={ticket.id}>Assign Ticket</button> : null}
                             {ticket.userId === Number(userID) ? <button value={ticket.id} onClick={deleteTicket}>Delete</button> : null}
                         </div>
                     ))}
@@ -112,11 +112,12 @@ function Helper() {
                     <h3 className='assignedListHelper'>Tickets Assigned to You</h3>
                     {userTickets.map(ticket => (
                         <div className='assignedListHelper' key={ticket.id}>
+                            {console.log(ticket.resolved)}
                             <p>Title: {ticket.title}</p>
                             <p>Category: {ticket.category}</p>
                             <p>Description: {ticket.description}</p>
                             <p>Attempted: {ticket.attempted}</p>
-                            <button value={ticket.id} onClick={ticketResolved}>Ticket Resolved</button>
+                            {ticket.resolved ? <p><b>Resolved</b></p> : <button value={ticket.id} onClick={ticketResolved}>Ticket Resolved</button>}
                             <button value={ticket.id} onClick={unassignTicket}>Unassign Ticket</button>
                         </div>
                     ))}
