@@ -22,3 +22,43 @@ To run the app, in the terminal cd into folder dev-desk and enter put yarn start
     - Our app will have a backend database where all of the tickets will be held
 - Issues with App
     - We never created a way for the helper to post their solutions. This would have to be created on the back-end before it can be added to the app. This was team project assignment. We basically ran out of time and werent able to include this aspect.
+
+
+## **Features**
+
+- What features are required for your minimum viable product?
+    - The MVP for this project will be to have two user sections: Student and Helper
+- What features may you wish to put in a future release?
+- What do the top 3 similar apps do for their users?
+
+## **Design - Planning**
+
+*Optional but highly recommended* *Please refer to this document:*
+
+[Build Weeks: Planning & Design Worksheet (How to build a beautiful application)](https://www.notion.so/Build-Weeks-Planning-Design-Worksheet-How-to-build-a-beautiful-application-aabd4ef25a184a2085e511ce93480c0f)
+
+- What design system will you use?
+- What will your user flow be?
+- What is the URL to your wireframes?
+
+## **Frameworks - Libraries**
+
+- What 3rd party frameworks/libraries are you considering using?
+    - React JS
+- Do APIs require you to contact its maintainer to gain access?
+    - No
+- Are you required to pay to use the API?
+    - No
+- Have you considered using Apple Frameworks? (MapKit, Healthkit, ARKit?)
+    - No
+
+## **Target Audience**
+
+- Who is your target audience? Be specific.
+    - Our Target audience will be both the students and advisors at Lambda School
+- What feedback have you gotten from potential users?
+    - Not yet
+- Have you validated the problem and your solution with your target audience? How?
+    - No
+
+Copyright Lambda School 2019, All Rights Reserved
