@@ -17,6 +17,7 @@
     "jwt-decode": "^2.2.0",
     "lodash": "^4.17.21",
     "node-notifier": "^9.0.1",
+    "normalize-url": "^6.0.1",
     "object-path": "^0.11.5",
     "postcss": "^8.2.15",
     "react": "^16.12.0",
