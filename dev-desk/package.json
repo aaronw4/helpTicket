@@ -10,6 +10,7 @@
     "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "formik": "^2.1.1",
+    "glob-parent": "^6.0.0",
     "hosted-git-info": "^4.0.2",
     "immer": "^8.0.4",
     "ini": "^2.0.0",
