@@ -12,7 +12,7 @@
     "formik": "^2.1.1",
     "glob-parent": "^6.0.0",
     "hosted-git-info": "^4.0.2",
-    "immer": "^8.0.4",
+    "immer": "^9.0.6",
     "ini": "^2.0.0",
     "jwt-decode": "^2.2.0",
     "lodash": "^4.17.21",
