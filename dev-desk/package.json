@@ -27,6 +27,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
     "reactstrap": "^8.2.0",
+    "set-value": "^4.1.0",
     "styled-components": "^4.4.1",
     "url-parse": "^1.5.1"
   },
