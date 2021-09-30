@@ -19,7 +19,7 @@
     "node-notifier": "^9.0.1",
     "normalize-url": "^6.0.1",
     "nth-check": "^2.0.1",
-    "object-path": "^0.11.6",
+    "object-path": "^0.11.8",
     "postcss": "^8.2.15",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
