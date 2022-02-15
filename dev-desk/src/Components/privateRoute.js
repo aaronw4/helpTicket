@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Redirect} from 'react-router-dom';
+import {Route, Navigate} from 'react-router-dom';
 
 export const HelperPrivateRoute = ({component: Component, ...theRest}) => {
     return(
@@ -9,7 +9,7 @@ export const HelperPrivateRoute = ({component: Component, ...theRest}) => {
                 if (localStorage.getItem('token')) {
                 return <Component/>
             } else {
-                return <Redirect to='/loginHelper'/>
+                return <Navigate to='/loginHelper'/>
             }
             }}
         />
@@ -24,7 +24,7 @@ export const StudentPrivateRoute = ({component: Component, ...theRest}) => {
                 if (localStorage.getItem('token')) {
                 return <Component/>
             } else {
-                return <Redirect to='/loginStudent'/>
+                return <Navigate to='/loginStudent'/>
             }
             }}
         />
