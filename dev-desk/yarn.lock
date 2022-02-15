@@ -3820,9 +3820,9 @@ ejs@^3.1.6:
     jake "^10.6.1"
 
 electron-to-chromium@^1.4.17:
-  version "1.4.69"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.69.tgz#d52eb7887d2ec5ba62a8cb3491b990983cb6d2e0"
-  integrity sha512-0rxK21MqWhN/fVUXNOeBksRlw79Wq26y6R8lxEEL2v7vwzRWbYhXI7Id5msee7/q1NNgu4mG78qaablN2xtfTQ==
+  version "1.4.70"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.70.tgz#b389047a844ccc84bd185f480f52d2b6306a4cfd"
+  integrity sha512-joSEu0IwP/rOY8mHcQ6J2MEm5GgsvVcrNDSGg2wQiV0epjsq6pNvRk4UA2nqV8aK0PPL+Z1Z/uD73bG8swzroA==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -7525,9 +7525,9 @@ rc-resize-observer@^1.0.0, rc-resize-observer@^1.1.0, rc-resize-observer@^1.2.0:
     resize-observer-polyfill "^1.5.1"
 
 rc-select@~14.0.0-alpha.15, rc-select@~14.0.0-alpha.23, rc-select@~14.0.0-alpha.8:
-  version "14.0.0-alpha.25"
-  resolved "https://registry.yarnpkg.com/rc-select/-/rc-select-14.0.0-alpha.25.tgz#9e6ca83b090e020a730fdfdab07c1050549426e4"
-  integrity sha512-U9AMzXsOCCdtn96YIZdUrYbxk+5u6uWUCaYH2129X3FTjQITqAjEPYHfPcxU/G7+lwiD0pIaU95W0NMkg+26qw==
+  version "14.0.0-alpha.26"
+  resolved "https://registry.yarnpkg.com/rc-select/-/rc-select-14.0.0-alpha.26.tgz#51ae0aee882d3a729648f86fe99fe7d0006d9bdb"
+  integrity sha512-5+vpP+qkYg9TiQb06BIVMTdnKwjXW/4ud8NWaCtnLGsyeqN6Hg7HGTUwlTTOyNOU5zMjbKHrAIvMk8NipGKqtA==
   dependencies:
     "@babel/runtime" "^7.10.1"
     classnames "2.x"
@@ -7651,9 +7651,9 @@ rc-upload@~4.3.0:
     rc-util "^5.2.0"
 
 rc-util@^5.0.1, rc-util@^5.0.6, rc-util@^5.0.7, rc-util@^5.12.0, rc-util@^5.14.0, rc-util@^5.15.0, rc-util@^5.16.1, rc-util@^5.2.0, rc-util@^5.2.1, rc-util@^5.3.0, rc-util@^5.4.0, rc-util@^5.5.0, rc-util@^5.6.1, rc-util@^5.7.0, rc-util@^5.8.0, rc-util@^5.9.4, rc-util@^5.9.8:
-  version "5.18.0"
-  resolved "https://registry.yarnpkg.com/rc-util/-/rc-util-5.18.0.tgz#1a159ee670e3781b49026abbc332d3f2099d631b"
-  integrity sha512-/P+9rRNgetBo27llrBRoerKU6n4uZ5joCWbeC7mBXeyY3ChP2N2o8amXWaVD74QReGQ9dQKYmxNDkM1VU+Ej3Q==
+  version "5.18.1"
+  resolved "https://registry.yarnpkg.com/rc-util/-/rc-util-5.18.1.tgz#80bd1450b5254655d2fbea63e3d34f6871e9be79"
+  integrity sha512-24xaSrMZUEKh1+suDOtJWfPe9E6YrwryViZcoPO0miJTKzP4qhUlV5AAlKQ82AJilz/AOHfi3l6HoX8qa1ye8w==
   dependencies:
     "@babel/runtime" "^7.12.5"
     react-is "^16.12.0"
