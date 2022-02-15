@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Loader from 'react-loader-spinner';
+import { Oval } from 'react-loader-spinner';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 
@@ -76,8 +76,7 @@ class LoginHelper extends React.Component {
                     {this.state.failLogin === true ? <p>Log In Failed</p> : null}
                 </form>
                 {this.state.hitSubmit === true ? 
-                <Loader
-                    type="Oval"
+                <Oval
                     color="white"
                     height={50}
                     width={50}

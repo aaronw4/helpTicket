@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Loader from 'react-loader-spinner';
+import { Oval } from 'react-loader-spinner';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 export class studentRegister extends React.Component {
@@ -71,8 +71,7 @@ export class studentRegister extends React.Component {
           </div>
         </div>
         {this.state.hitSubmit === true ? 
-        <Loader
-          type="Oval"
+        <Oval
           color="white"
           height={50}
           width={50}
