@@ -101,8 +101,8 @@ function Helper() {
                             <p>Description: {ticket.description}</p>
                             <p>Attempted: {ticket.attempted}</p>
                             {ticket.resolved ? <p>Resolved</p> : null }
-                            {ticket.openStatus == false && ticket.resolved == false ? <p>Ticket Assigned</p> : null}
-                            {ticket.resolved == false && ticket.openStatus == true ? <button onClick={assignTicket} value={ticket.id}>Assign Ticket</button> : null}
+                            {ticket.openStatus === false && ticket.resolved === false ? <p>Ticket Assigned</p> : null}
+                            {ticket.resolved === false && ticket.openStatus === true ? <button onClick={assignTicket} value={ticket.id}>Assign Ticket</button> : null}
                             {ticket.userId === Number(userID) ? <button value={ticket.id} onClick={deleteTicket}>Delete</button> : null}
                         </div>
                     ))}
